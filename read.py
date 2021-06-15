@@ -326,15 +326,12 @@ def main():
     featureCount=11
 
 
-    drawSet(6,7,split)
-    drawSet(9, 7,split)
-    drawSet(11, 7,split,True)
 
-    #loadDataset('./letter/person.csv', split, trainingSet, testSet)
+    loadDataset('./out.csv', split, trainingSet, testSet)
 
-   # trainSet=normalized(trainingSet, featureCount)
-   # testSet2=normalized(trainingSet, featureCount)
-    #testNtrain(trainSet, testSet2,True)
+    trainSet=normalized(trainingSet, featureCount)
+    testSet2=normalized(trainingSet, featureCount)
+    testNtrain(trainSet, testSet2,True)
 
 
 
@@ -346,9 +343,7 @@ def main():
     # testSet2 = createPrimeAttrList(testSet, featureCount)
     # testNtrain(trainSet, testSet2);
 
-    plt.show()
-    #fig, ax = plt.subplots()
-    #ax.savefig("test.png")
+    
 
 #readAllFileInFolder()
 main()

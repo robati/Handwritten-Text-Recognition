@@ -317,7 +317,7 @@ def drawSet(fCount,iterCount,split,showCM=False):
     plt.legend(loc='upper left')
 
 def main():
-    print("starting")
+
     trainingSet = []
     testSet = []
 

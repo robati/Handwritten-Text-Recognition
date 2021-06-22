@@ -10,6 +10,10 @@ import copy
 import operator
 
 def incidenceCount(array):
+"""
+if there is more than one black pixel next to each other, it returns 2. if there no black pixel it returns 0 
+other wise it returns 1. 
+"""
     zeroFlag = False
     iCount = 0
     for i in range(0, len(array)):
@@ -56,6 +60,10 @@ def convert4TupleToDec(tuple):
 
 
 def mainTest(file):
+"""
+converting image into an array . each pixel with  intensity higher than 128 is assumed to be 1(black color)
+only for black pixels the 4tuple is computed and decimal equivalent  of the tuple is used as the key in a dictionary to count all the occurrences of each 4tuple
+"""
     img = Image.open(file).convert('L')
 
     np_img = np.array(img)
@@ -74,6 +82,10 @@ def mainTest(file):
 
 
 def readAllFileInFolder():
+"""
+converts each image of letters into an array of numbers and sets the file name (label) as the last item in the array. 
+saves all arrays in a csv file . 
+"""
     import pathlib
     import csv
 
